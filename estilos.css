@@ -1,5 +1,15 @@
 .header{
 	background: #ED1D24;
+	margin-bottom: 30px;
+}
+
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+h6{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: bold;
 }
 
 .logo{

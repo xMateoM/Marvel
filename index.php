@@ -5,9 +5,9 @@ function listar_html($matriz)
     <div class="container">
         <div class="row">
             <?php
-            $cotador = 0;
+            $contador = 0;
             foreach ($matriz as $row => $valor) {
-                $cotador++;
+                $contador++;
                 $id = $valor['id'];
                 $portada = $valor['portada'];
                 $titulo = $valor['titulo'];
@@ -21,14 +21,14 @@ function listar_html($matriz)
                     <p><?php echo date_format($fecha_publicacion, 'F d, Y'); ?></p>
 
                     <div class="col-12 col-md-12 col-lg-12 col-xl-12 text-center">
-                        <button class="btn-primary" name="like" onclick="like(<?php echo $cotador; ?>)" value="<?php echo $id; ?>">Like 
+                        <button class="btn-primary" name="like" onclick="like(<?php echo $contador; ?>)" value="<?php echo $id; ?>">Like 
                             <i class="fa fa-thumbs-up"></i>
                         </button>
-                        <label id="like<?php echo $cotador; ?>" for="like"><?php echo $like; ?></label>&nbsp;
-                        <button class="btn-danger" name="dislike" onclick="dislike(<?php echo $cotador; ?>)">Dislike 
+                        <label id="like<?php echo $contador; ?>" for="like"><?php echo $like; ?></label>&nbsp;
+                        <button class="btn-danger" name="dislike" onclick="dislike(<?php echo $contador; ?>)">Dislike 
                             <i class="fa fa-thumbs-down"></i>
                         </button>
-                        <label id="dislike<?php echo $cotador; ?>" for="dislike"><?php echo $dislike; ?></label>
+                        <label id="dislike<?php echo $contador; ?>" for="dislike"><?php echo $dislike; ?></label>
                     </div>
                     <br>
                 </div>

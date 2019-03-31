@@ -43,9 +43,7 @@ function consumirAPI()
     $json = file_get_contents($url);
     $datos = json_decode($json, true);
     $comics = $datos['data']['results'];
-
     $matriz = crearMatriz($comics);
-    $matriz = asignar_id_matriz($matriz);
     return $matriz;
 }
 
@@ -64,15 +62,6 @@ function crearMatriz($comics)
 
         $array = array('id' => $id, 'portada' => $portada, 'titulo' => $titulo, 'fecha_publicacion' => $fecha_publicacion, 'like' => $like, 'dislike' => $dislike);
         $likes[] = $array;
-    }
-    return $likes;
-}
-
-function asignar_id_matriz($likes)
-{
-    $cantidad = count($likes) - 1;
-    for ($i = 0; $i <= $cantidad; $i++) {
-        $likes[$i]['id'] = $i;
     }
     return $likes;
 }
